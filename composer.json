@@ -1,24 +1,41 @@
 {
-    "name": "7ts/greeting",
-    "description": "Test Greeting Package",
+    "name": "7ts/layout-greeting",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+           "SevenTS\\Greeting\\": "src/",
+            "SevenTS\\DateFormat\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "7TS"
         }
     ],
+    "description": "Laravel Simple Greeting",
+    "keywords": [
+        "laravel",
+        "package"
+    ],
+    "license": "MIT",
     "minimum-stability": "dev",
     "require": {},
-    "autoload": {
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload-dev": {
         "psr-4": {
-            "SevenTS\\Greeting\\": "src/",
-            "SevenTS\\DateFormat\\": "src/"
+            "SevenTS\\LayoutMaster\\Tests\\": "tests/"
         }
     },
-    "files": [
-        "src/Greeting.php",
-        "src/DateFormat.php"
-    ],
-    "classmap": [
-        "database/migrations"
-    ]
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SevenTS\\Greeting\\GreetingServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
 }
