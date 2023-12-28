@@ -1,5 +1,5 @@
 {
-    "name": "7ts/layout-greeting",
+    "name": "7ts/laravel-greeting",
     "type": "library",
     "autoload": {
         "psr-4": {
